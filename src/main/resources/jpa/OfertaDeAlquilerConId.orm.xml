@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                                     http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+
+    <entity class="es.jrodg85.InmoGuancheCRM.entidades.OfertaDeAlquilerConId" access="FIELD">
+           <entity-listeners>
+            <entity-listener class="es.jrodg85.InmoGuancheCRM.repositorios.OfertaDeAlquilerListener">
+                <pre-persist method-name="prePutOfertaDeAlquiler" />
+            </entity-listener>
+        </entity-listeners>
+        <attributes>
+        	<basic name="precioAlquilerMensual" optional="false" >
+				<column name="PRECIO_ALQUILER_MENSUAL" length="32 "/>
+            </basic>
+            <basic name="mesesFianza" optional="false" >
+				<column name="MESES_FIANZA" length="32 "/>
+            </basic>
+		</attributes>
+    </entity>
+</entity-mappings>

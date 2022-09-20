@@ -1,0 +1,3 @@
+rootProject.name = 'InmoGuanche-CRM'
+
+includeFlat 'jrodg85-RealEstate'

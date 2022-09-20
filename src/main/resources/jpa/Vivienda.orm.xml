@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                                     http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+
+			     
+    <mapped-superclass class="es.jrodg85.realestate.Vivienda" access="FIELD">
+        <attributes>
+        	<id name="idVivienda">
+        		<generated-value strategy="IDENTITY"/>
+        	</id>
+            <basic name="propietario" optional="false" >
+				<column name="PROPIETARIO" length="32 "/>
+            </basic>
+            <basic name="provincia" optional="false" >
+				<column name="PROVINCIA" length="32 "/>
+            </basic>
+            <basic name="ciudad" optional="false" >
+            	<column name="CIUDAD" length="32 "/>
+            </basic>
+            <basic name="direccion" optional="false" >
+				<column name="DIRECCION" length="100 "/>
+            </basic>
+            <basic name="codigoPostal" optional="false" >
+            	<column name="CODIGO_POSTAL" length="32 "/>
+            </basic>
+            <basic name="idReferenciaCatastral" optional="false" >
+				<column name="REFERENCIA_CATASTRAL" length="32 "/>
+            </basic>
+            <basic name="superficie" optional="false" >
+            	<column name="SUPERFICIE" length="32 "/>
+            </basic>
+            <basic name="habitaciones" optional="false" >
+            	<column name="HABITACIONES" length="32 "/>
+            </basic>
+            <basic name="banyos" optional="false" >
+            	<column name="BAÑOS" length="32 "/>
+            </basic>
+        </attributes>
+    </mapped-superclass>
+</entity-mappings>
